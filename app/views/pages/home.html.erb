@@ -1,4 +1,22 @@
-<div class="jumbotron">
-    <h2> Home</h2>
-    <i class="fa fa-users" aria-hidden="true"></i>
+<div class="jumbotron text-center">
+  <h1>Welcome to Dev Match</h1>
+  <h3>A membership site where entrepreneurs can meet developers.</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="well">
+            <h2 class="text-center">Basic Membership!</h2>
+            <h4 class="text-center">Sign up for free access to our community!</h4>
+            </br>
+            <%= link_to "Sign up Basic", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+    </div>    
+    <div class="col-md-6">
+        <div class="well">
+            <h2 class="text-center">Basic Membership!</h2>
+            <h4 class="text-center">Sign up for Pro account to access the most of our community! @ 10$/month!</h4>
+            <%= link_to "Sign up Pro", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+        </div>
+    </div>    
 </div>
