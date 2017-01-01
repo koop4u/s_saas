@@ -2,9 +2,8 @@ class ProfilesController < ApplicationController
     def new
         #form where a user cna fill their own profile
         @user = User.find ( params[:user_id] )
-        @profile = @user.build_profile
+        @profile = Profile.new
     end
-    
     def create
         @user = User.find( params[:user_id] )
         @profile = @user.build_profile(profile_params) #Trebuie de definit fiecare parametru pentru securitate prin private mai jos!
@@ -21,5 +20,5 @@ class ProfilesController < ApplicationController
         def profile_params
             params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
         end
-
 end
+
